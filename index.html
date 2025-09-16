@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Rive Animation</title>
+  <!-- Load the Rive web runtime -->
+  <script src="https://unpkg.com/@rive-app/canvas@2.17.5"></script>
+</head>
+<body>
+  <!-- The canvas where the animation will render -->
+  <canvas id="riveCanvas" width="500" height="500"></canvas>
+
+  <script>
+    // Get the canvas element
+    const canvas = document.getElementById('riveCanvas');
+
+    // Create a new Rive instance
+    const riveAnim = new rive.Rive({
+      src: 'character_walk.riv',   // 👈 replace with your exact file name
+      canvas: canvas,
+      autoplay: true,
+    });
+  </script>
+</body>
+</html>
